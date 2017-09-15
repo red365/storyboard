@@ -35,8 +35,10 @@
     <%= form.label :password_confirmation %>
     <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
   </div>
+
+
     
-  <% if is_admin(user) %>
+  <% if is_admin %>
     <div class="checkbox">
       <%= form.label "Is Admin?" %>
       <%= form.check_box :is_admin, id: :is_admin %>
