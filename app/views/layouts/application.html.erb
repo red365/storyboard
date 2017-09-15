@@ -9,6 +9,18 @@
   </head>
 
   <body>
+    <h1>Storyboard</h1>
+    <br>
     <%= yield %>
+    <br>
+    <br>
+    <% if logged_in? %>
+      <%= "Logged in as #{current_user.email}" %>
+      <%= link_to "(logout)", logout_path %>
+    <% else %>
+      <%= link_to "(login)", login_path %>
+       Logged out
+    <% end %>
+
   </body>
 </html>
