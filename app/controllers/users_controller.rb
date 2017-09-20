@@ -30,7 +30,6 @@ class UsersController < ApplicationController
     @user = User.new(sanitised_params)
     @user.organisation_id = get_organisation_id(org_name)
     @user.is_admin = is_admin(sanitised_params[:is_admin])
-    puts "USER.is_admin = " +  @user.is_admin.to_s
     
     respond_to do |format|
       if @user.save
