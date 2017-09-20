@@ -36,7 +36,10 @@
     <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
   </div>
 
-
+<div class="field">
+    <%= form.label :organisation %>
+    <%= form.text_field :organisation, id: :organisation %>
+  </div>
     
   <% if is_admin %>
     <div class="checkbox">

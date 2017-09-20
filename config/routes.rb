@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   resources :user_sessions, only: [ :new, :create, :destroy ]
   scope :admin do
-    resources :users, except: [ :new ]
+    resources :users, except: :new
   end
 end
