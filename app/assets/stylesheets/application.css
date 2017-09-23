@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+#login_header {
+      text-align: right;
+    font-size: 13px;
+        color: #333;
+}

@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  get '/', to: 'home#index'
   
-  resources :projects
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/', to: 'home#index'
   get 'login', to: 'user_sessions#new'
   get 'logout', to: 'user_sessions#destroy'
   get 'signup', to: 'users#new'
@@ -11,4 +9,9 @@ Rails.application.routes.draw do
   scope :admin do
     resources :users, except: :new
   end
+  resources :projects do
+    resources :domains
+  end
+
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
