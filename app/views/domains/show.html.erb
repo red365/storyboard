@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+ <strong>Title:</strong>
+  <%= @domain.title %>
+</p>
+
 <%= link_to 'Edit', edit_project_domain_path(@domain) %> |
-<%= link_to 'Back', project_domains_path %>
+<%= link_to 'Back', project_path(params[:project_id]) %>
