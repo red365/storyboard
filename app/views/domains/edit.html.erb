@@ -2,5 +2,5 @@
 
 <%= render 'form', domain: @domain %>
 
-<%= link_to 'Show', project_domain_path(params[:project_id], @domain) %> |
-<%= link_to 'Back', project_path(params[:project_id]) %>
+<%= link_to 'Project', project_path(params[:project_id]) %> |
+<%= link_to 'Back', project_domain_path(params[:project_id], @domain) %>

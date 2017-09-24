@@ -5,6 +5,8 @@
   <%= @project.title %>
 </p>
 
+<%= link_to 'New Domain', new_project_domain_path(@project) %>
+
 <table>
   <thead>
     <tr>
@@ -17,8 +19,8 @@
     <tr>
         <td><%= domain.title %></td>
         <td><%= link_to 'Show', project_domain_path(domain.project_id, domain) %></td>
-        <td><%= link_to 'Edit', edit_project_domain_path(@project, domain) %></td>
-        <td><%= link_to 'Destroy', project_domain_path(:projects, domain), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_project_domain_path(domain.project_id, domain) %></td>
+        <td><%= link_to 'Destroy', project_domain_path(domain.project_id, domain), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

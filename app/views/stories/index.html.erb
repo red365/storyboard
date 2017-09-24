@@ -1,18 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
- <strong>Title:</strong>
-  <%= @domain.title %>
-</p>
-
-
-<%= link_to 'Edit', edit_project_domain_path(@domain) %> |
-<%= link_to 'Back', project_path(params[:project_id]) %>
-
-
-<p>
-  <%= link_to 'New Story', new_project_domain_story_path(params[:project_id], @domain) %>
-</p>
+<h1>Stories</h1>
 
 <table>
   <thead>
@@ -44,10 +32,14 @@
         <td><%= story.estimate %></td>
         <td><%= story.completion_time %></td>
         <td><%= story.completed %></td>
-        <td><%= link_to 'Show', project_domain_story_path(params[:project_id], params[:id], story) %></td>
-        <td><%= link_to 'Edit', edit_project_domain_story_path(params[:project_id], params[:id], story) %></td>
-        <td><%= link_to 'Destroy', project_domain_story_path(params[:project_id], params[:id], story), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<br>
+
+<%= link_to 'New Story', new_story_path %>

@@ -10,7 +10,9 @@ Rails.application.routes.draw do
     resources :users, except: :new
   end
   resources :projects do
-    resources :domains, except: [ :index ]
+    resources :domains, except: [ :index ] do
+      resources :stories, except: [ :index ]
+    end
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

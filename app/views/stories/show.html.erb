@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @story.title %>
+</p>
+
+<p>
+  <strong>Actor:</strong>
+  <%= @story.actor %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @story.action %>
+</p>
+
+<p>
+  <strong>Objective:</strong>
+  <%= @story.objective %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @story.notes %>
+</p>
+
+<p>
+  <strong>How to test:</strong>
+  <%= @story.how_to_test %>
+</p>
+
+<p>
+  <strong>Definition of done:</strong>
+  <%= @story.definition_of_done %>
+</p>
+
+<p>
+  <strong>Estimate:</strong>
+  <%= @story.estimate %>
+</p>
+
+<p>
+  <strong>Completion time:</strong>
+  <%= @story.completion_time %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @story.completed %>
+</p>
+
+<%= link_to 'Edit', edit_project_domain_story_path(params[:project_id], params[:domain_id], @story) %> |
+<%= link_to 'Back', project_domain_path(params[:project_id], params[:domain_id]) %>

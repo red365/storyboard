@@ -10,6 +10,7 @@ class DomainsController < ApplicationController
   # GET /domains/1
   # GET /domains/1.json
   def show
+    @stories = Story.where(:domain_id => params[:id])
   end
 
   # GET /domains/new
@@ -29,7 +30,7 @@ class DomainsController < ApplicationController
 
     respond_to do |format|
       if @domain.save
-        format.html { redirect_to project_domains_path, notice: 'Domain was successfully created.' }
+        format.html { redirect_to project_path(params[:project_id]), notice: 'Domain was successfully created.' }
         format.json { render :show, status: :created, location: @domain }
       else
         format.html { render :new }
@@ -57,7 +58,7 @@ class DomainsController < ApplicationController
   def destroy
     @domain.destroy
     respond_to do |format|
-      format.html { redirect_to project_domains_path, notice: 'Domain was successfully destroyed.' }
+      format.html { redirect_to project_path(params[:project_id]), notice: 'Domain was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

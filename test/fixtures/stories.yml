@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  actor: MyString
+  action: MyText
+  objective: MyText
+  notes: MyText
+  how_to_test: MyText
+  definition_of_done: MyString
+  estimate: 1.5
+  completion_time: 1.5
+  completed: 1
+
+two:
+  title: MyString
+  actor: MyString
+  action: MyText
+  objective: MyText
+  notes: MyText
+  how_to_test: MyText
+  definition_of_done: MyString
+  estimate: 1.5
+  completion_time: 1.5
+  completed: 1

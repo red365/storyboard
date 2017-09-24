@@ -1,0 +1,67 @@
+<%= form_with(model: story, local: true) do |form| %>
+  <% if story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+      <ul>
+      <% story.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :story_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actor %>
+    <%= form.text_field :actor, id: :story_actor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :action %>
+    <%= form.text_area :action, id: :story_action %>
+  </div>
+
+  <div class="field">
+    <%= form.label :objective %>
+    <%= form.text_area :objective, id: :story_objective %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes, id: :story_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :how_to_test %>
+    <%= form.text_area :how_to_test, id: :story_how_to_test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :definition_of_done %>
+    <%= form.text_field :definition_of_done, id: :story_definition_of_done %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estimate %>
+    <%= form.text_field :estimate, id: :story_estimate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :completion_time %>
+    <%= form.text_field :completion_time, id: :story_completion_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :completed %>
+    <%= form.number_field :completed, id: :story_completed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

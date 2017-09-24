@@ -1,0 +1,6 @@
+<h1>Editing Story</h1>
+
+<%= render 'form', story: @story %>
+
+<%= link_to 'Show', project_domain_story_path(params[:project_id], params[:domain_id], @story) %> |
+<%= link_to 'Back', project_domain_story_path(params[:project_id], params[:domain_id], @story) %>
