@@ -11,12 +11,12 @@
   <body>
     <div id="login_header">
     <% if logged_in? %>
-      <%= "Logged in as #{current_user.email}" %>
-      <%= link_to "(logout)", logout_path %>
+      <%= "Welcome #{current_user.forename}" %> |
+      <%= link_to "Logout", logout_path %>
     <% else %>
-      <%= link_to "(login)", login_path %>
-       Logged out
-      <% end %>
+      <%= link_to "Sign Up", signup_path %> | 
+      <%= link_to "Login", login_path %>
+    <% end %>
     </div>
 
     <h1>Storyboard</h1>

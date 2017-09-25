@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20170924171527) do
     t.text "objective"
     t.text "notes"
     t.text "how_to_test"
-    t.string "definition_of_done"
+    t.text "definition_of_done"
     t.float "estimate"
     t.float "completion_time"
     t.integer "completed"
