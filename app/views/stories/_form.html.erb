@@ -56,6 +56,11 @@
     <%= form.text_field :completion_time, id: :story_completion_time %>
   </div>
 
+  <div class="field">
+    <%= form.label :priority %>
+    <%= form.number_field :priority, id: :priority %>
+  </div>
+
   <div class="checkbox">
     <label for="completed">Story completed?</label>
     <%= form.check_box :completed, id: :story_completed %>

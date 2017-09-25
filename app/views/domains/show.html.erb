@@ -26,6 +26,7 @@
       <th>Definition of done</th>
       <th>Estimate</th>
       <th>Completion time</th>
+      <th>Priority</th>
       <th>Completed</th>
       <th colspan="3"></th>
     </tr>
@@ -34,7 +35,7 @@
   <tbody>
     <% @stories.each do |story| %>
       <tr>
-        <td><%= story.title %></td>
+        <td><strong><%= story.title %></strong></td>
         <td><%= story.actor %></td>
         <td><%= story.action %></td>
         <td><%= story.objective %></td>
@@ -43,8 +44,9 @@
         <td><%= story.definition_of_done %></td>
         <td><%= story.estimate %></td>
         <td><%= story.completion_time %></td>
-        <td><%= story.completed %></td>
-        <td><%= link_to 'Show', project_domain_story_path(params[:project_id], params[:id], story) %></td>
+	<td><%= story.priority %></td>
+	<td><%= story.completed %></td>
+        <td><%= link_to 'View', project_domain_story_path(params[:project_id], params[:id], story) %></td>
         <td><%= link_to 'Edit', edit_project_domain_story_path(params[:project_id], params[:id], story) %></td>
         <td><%= link_to 'Destroy', project_domain_story_path(params[:project_id], params[:id], story), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
